@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 20px;
+}
+
+.logo {
+    border-bottom: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: inline-block;
+    letter-spacing: 0.1rem;
+    border-bottom: 8px solid #404040;
+    padding-bottom: 5px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav {
+    align-content: center;
+}
+
+header nav ul, 
+.container-habilidades ul,
+#menu-complementaria ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+header nav ul li, #menu-complementaria ul li {
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+
+#perfil {
+    padding: 20px;
+}
+
+.container-perfil {
+    display: flex;
+}
+
+.foto-perfil {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.texto-perfil {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.titulo-experiencia h3 {
+    text-transform: uppercase;
+    color: #cb5709;
+}
+
+.experiencia-profesional.relevante h3 {
+    color: #000;
+}
+
+.experiencia-relevancia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experiencia-relevancia  h4 {
+    padding-left: 8px;
+    border-left: 15px solid #d9d9d9;
+}
+
+
+.titulo-experiencia {
+    display: flex;
+    justify-content: space-between;
+}
+
+.experiencia-profesional {
+    padding: 20px 30px;
+}
+
+.experiencia-profesional.relevante {
+    padding: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.experiencia-profesional.relevante ul {
+    display: block;
+}
+
+.experiencia-profesional ul {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.relevante, .experiencia-profesional.relevante:hover {
+    background-color: #d9d9d9;
+    border-radius: 15px;
+}
+
+.experiencia-profesional:hover {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    
+}
+
+.experiencia-profesional:hover {
+    cursor: pointer;
+}
+
+#menu-complementaria {
+    margin-bottom: 20px;
+}
+
+#complementaria h2 {
+    margin-top: 20px;
+    border-bottom: 0px;
+}
+
+.container-complementaria {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* #complementaria h2 {
+    display: inline-block;
+} */
+
+
+.estudio-complementario {
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    border: 3px solid #404040;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.container-complementaria a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+.container-habilidades ul li {
+    padding: 10px 20px;
+    background-color: #404040;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.container-habilidades h2 {
+    border-bottom: 0px;
+    margin-top: 20px;
+}
+
+.experiencia-profesional ul {
+    display: none;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+
+
