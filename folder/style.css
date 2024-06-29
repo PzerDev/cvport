@@ -31,21 +31,30 @@ h2 {
     padding-bottom: 5px;
 }
 
+.texto-perfil h2 {
+    border-bottom: 0px;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     position: fixed;
+    max-width: 900px;
     width: 100%;
-    left: 0;
+    /* left: 0; */
     top: 0;
     background-color: #fff;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); */
     z-index: 100;
 }
 
 nav {
     align-content: center;
+}
+
+header nav ul li:hover {
+    font-weight: bold;
 }
 
 header nav ul, 
@@ -218,6 +227,46 @@ footer {
     padding: 20px;
 }
 
+/* ******************* */
+/* estilos de contacto */
+/* ******************* */
+
+.container-contacto {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.container-contacto h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-bottom: 0px;
+}
+
+.container-info {
+    display: flex;
+    margin-right: 20px;
+}
+
+.container-info span {
+    font-size: 50px;
+    padding: 20px;
+    color: #cb5709;
+}
+
+.container-info div {
+    padding: 20px 0px;
+}
+
+.container-info div h3 {
+    font-size: 25px;
+}
+
+.container-info div p {
+    font-size: 18px;
+}
 
 @media only screen and (max-width: 872px){
     .container-perfil {
@@ -225,23 +274,52 @@ footer {
       text-align: center;
     }
 
+    .container-info {
+        width: 46%;
+    }
+
 }
 
 @media only screen and (max-width: 640px){
+    header {
+        display: block;
+        text-align: center;
+    }
+    body {
+        top: 100px;
+    }
+    header nav ul {
+        margin-top: 10px;
+        justify-content: center;
+    }
     .titulo-experiencia {
       display: block;
     }
     .estudio-complementario h4 {
         display: none;
     }
-
-
-
 }
 
 @media only screen and (max-width: 500px){
     h2 {
         font-size: 1.3rem;
+    }
+
+}
+
+
+
+/* Media de contacto */
+
+@media only screen and (max-width: 570px){
+    .container-contacto {
+        display: block;
+    }
+    .container-info {
+        width: 100%;
+    }
+    .container-info div h3 {
+        font-size: 20px;
     }
 
 }
