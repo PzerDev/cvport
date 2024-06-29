@@ -28,20 +28,28 @@ let enlaces = document.querySelectorAll('.container-complementaria a[href]');
 const validarEnlace = {
 
     validador(sitio, cadena) {
-        for (const enlace of enlaces) {
-            const href = enlace.getAttribute('href');
-                if (!sitio.test(href)) {
-                    enlace.style.display = 'none';
+        if (cadena === '#todo') {
+            enlaces.forEach(function(el) {
+                el.style.display = 'block';
+            })
+        } else {
+            for (const enlace of enlaces) {
+                const href = enlace.getAttribute('href');
+                    if (!sitio.test(href)) {
+                        enlace.style.display = 'none';
+                    }
+                    if (sitio.test(href)) {
+                        enlace.style.display = 'block';
+                    } 
                 }
-                if (sitio.test(href)) {
-                    enlace.style.display = 'block';
-                } 
-            }
     
-        document.querySelectorAll('#menu-complementaria ul li').forEach(function(el) {
-            el.style = 'color: #000; font-weight: normal;';
-        });
-        document.querySelector(cadena).style = 'color: #cb5709; font-weight: bold;';
+            }
+            
+        if (document.querySelector('.selector-menu')){
+            document.querySelector('.selector-menu').classList.replace('selector-menu', 'no-selector-menu');
+        };
+        document.querySelector(cadena).classList.remove('no-selector-menu');
+        document.querySelector(cadena).classList.add('selector-menu');
     },
     
 
@@ -55,6 +63,10 @@ const validarEnlace = {
 
     sololearn() {
         validarEnlace.validador(regex.regexSololearn, '#sololearn');
+    },
+
+    todo() {
+        validarEnlace.validador(null, '#todo');
     }
 
 }
@@ -70,3 +82,6 @@ codecademy.addEventListener('click', validarEnlace.codecademy);
 
 const sololearn = document.querySelector('#sololearn');
 sololearn.addEventListener('click', validarEnlace.sololearn);
+
+const todosLosCursos = document.querySelector('#todo');
+todosLosCursos.addEventListener('click', validarEnlace.todo);

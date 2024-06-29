@@ -8,6 +8,8 @@
 body {
     max-width: 900px;
     margin: 0 auto;
+    position: relative;
+    top: 70px;
 }
 
 main {
@@ -33,6 +35,13 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
 }
 
 nav {
@@ -165,13 +174,30 @@ header nav ul li, #menu-complementaria ul li {
     color: #000;
 }
 
+#menu-complementaria ul li {
+    padding: 5px 20px;
+    /* color: #000; */
+    margin-right: 10px;
+    border-radius: 16px;
+    margin-bottom: 10px;
+}
+
+.selector-menu {
+    color: #fff;
+    background-color: #404040;
+    font-weight: bold;
+}
+
+.no-selector-menu {
+    background-color: #f0f0f0;
+}
 
 
 
 .container-habilidades ul li {
     padding: 10px 20px;
     background-color: #404040;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-right: 10px;
     margin-bottom: 10px;
     color: white;
