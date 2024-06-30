@@ -85,3 +85,49 @@ sololearn.addEventListener('click', validarEnlace.sololearn);
 
 const todosLosCursos = document.querySelector('#todo');
 todosLosCursos.addEventListener('click', validarEnlace.todo);
+
+
+
+
+// código js para implementar modo oscuro
+
+const toggleModeButton = document.getElementById('toggleModeButton');
+toggleModeButton.addEventListener('click', toggleMode);
+
+let currentMode = 'light';
+function toggleMode() {
+//   const currentMode = localStorage.getItem('mode') || 'light';
+//   console.log(localStorage.getItem('mode'));
+  currentMode = currentMode === 'light' ? 'dark' : 'light';
+
+//   localStorage.setItem('mode', newMode);
+  updateStyles(currentMode);
+}
+
+function updateStyles(newMode) {
+  if (newMode === 'light') {
+    document.documentElement.style.setProperty('--color-fondo', '#fff');
+    document.documentElement.style.setProperty('--color-primario', '#404040');
+    document.documentElement.style.setProperty('--color-secundario', '#f0f0f0');
+    document.documentElement.style.setProperty('--color-relevante', '#d9d9d9');
+    document.documentElement.style.setProperty('--color-texto-selector-menu', '#fff');
+    document.documentElement.style.setProperty('--color-texto-experiencia', '#cb5709');
+    document.documentElement.style.setProperty('--color-texto', '#000');
+    document.documentElement.style.setProperty('--color-texto-fondo', '#fff');
+    document.documentElement.classList.remove('dark-mode');
+    document.querySelector('#toggleModeButton').innerHTML = '<span class="material-symbols-outlined">dark_mode</span>';
+    
+  } else {
+    document.documentElement.style.setProperty('--color-fondo', '#1d1d1d');
+    document.documentElement.style.setProperty('--color-primario', '#f0f0f0');
+    document.documentElement.style.setProperty('--color-secundario', '#505050');
+    document.documentElement.style.setProperty('--color-relevante', '#404040');
+    document.documentElement.style.setProperty('--color-texto-selector-menu', '#1d1d1d');
+    document.documentElement.style.setProperty('--color-texto-experiencia', '#ff9a0a');
+    document.documentElement.style.setProperty('--color-texto', '#fff');
+    document.documentElement.style.setProperty('--color-texto-fondo', '#1d1d1d');
+    document.documentElement.classList.add('dark-mode');
+    document.querySelector('#toggleModeButton').innerHTML = '<span class="material-symbols-outlined">light_mode</span>';   
+  }
+}
+

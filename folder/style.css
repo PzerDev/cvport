@@ -1,3 +1,15 @@
+:root {
+    /* variables */
+    --color-fondo: #fff;
+    --color-primario: #404040;
+    --color-secundario: #f0f0f0;
+    --color-relevante: #d9d9d9;
+    --color-texto-selector-menu: #fff;
+    --color-texto-experiencia: #cb5709;
+    --color-texto: #000;
+    --color-texto-fondo: #fff;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -5,11 +17,31 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
+/* Boton de modo oscuro estilos */
+
+/* Estilos generales del botón */
+#toggleModeButton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--color-primario); /* Ajusta el color del icono */
+    transition: color 0.3s ease;
+  }
+
+#toggleModeButton .material-symbols-outlined {
+    font-size: 16px;
+    padding: 0px 10px;
+}
+  
 body {
     max-width: 900px;
     margin: 0 auto;
     position: relative;
     top: 70px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
 
 main {
@@ -27,7 +59,7 @@ h2 {
     margin-bottom: 15px;
     display: inline-block;
     letter-spacing: 0.1rem;
-    border-bottom: 8px solid #404040;
+    border-bottom: 8px solid var(--color-primario);
     padding-bottom: 5px;
 }
 
@@ -44,7 +76,7 @@ header {
     width: 100%;
     /* left: 0; */
     top: 0;
-    background-color: #fff;
+    background-color: var(--color-fondo);
     /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); */
     z-index: 100;
 }
@@ -63,6 +95,10 @@ header nav ul,
     display: flex;
     list-style: none;
     flex-wrap: wrap;
+}
+
+header nav ul li {
+    color: var(--color-primario);
 }
 
 header nav ul li, #menu-complementaria ul li {
@@ -91,11 +127,11 @@ header nav ul li, #menu-complementaria ul li {
 
 .titulo-experiencia h3 {
     text-transform: uppercase;
-    color: #cb5709;
+    color: var(--color-texto-experiencia);
 }
 
 .experiencia-profesional.relevante h3 {
-    color: #000;
+    color: var(--color-texto);
 }
 
 .experiencia-relevancia {
@@ -106,7 +142,7 @@ header nav ul li, #menu-complementaria ul li {
 
 .experiencia-relevancia  h4 {
     padding-left: 8px;
-    border-left: 15px solid #d9d9d9;
+    border-left: 15px solid var(--color-relevante);
 }
 
 
@@ -135,12 +171,12 @@ header nav ul li, #menu-complementaria ul li {
 }
 
 .relevante, .experiencia-profesional.relevante:hover {
-    background-color: #d9d9d9;
+    background-color: var(--color-relevante);
     border-radius: 15px;
 }
 
 .experiencia-profesional:hover {
-    background-color: #f0f0f0;
+    background-color: var(--color-secundario);
     border-radius: 15px;
     
 }
@@ -172,7 +208,7 @@ header nav ul li, #menu-complementaria ul li {
     text-align: center;
     padding: 20px;
     border-radius: 15px;
-    border: 3px solid #404040;
+    border: 3px solid var(--color-primario);
     margin-right: 10px;
     margin-bottom: 10px;
     cursor: pointer;
@@ -180,7 +216,7 @@ header nav ul li, #menu-complementaria ul li {
 
 .container-complementaria a, nav ul a {
     text-decoration: none;
-    color: #000;
+    color: var(--color-primario);
 }
 
 #menu-complementaria ul li {
@@ -192,24 +228,25 @@ header nav ul li, #menu-complementaria ul li {
 }
 
 .selector-menu {
-    color: #fff;
-    background-color: #404040;
+    color: var(--color-texto-selector-menu);
+    background-color: var(--color-primario);
     font-weight: bold;
 }
 
 .no-selector-menu {
-    background-color: #f0f0f0;
+    background-color: var(--color-secundario);
 }
 
 
 
 .container-habilidades ul li {
     padding: 10px 20px;
-    background-color: #404040;
+    background-color: var(--color-primario);
     border-radius: 8px;
     margin-right: 10px;
     margin-bottom: 10px;
-    color: white;
+    color: var(--color-texto-fondo);
+    font-weight: bold;
 }
 
 .container-habilidades h2 {
@@ -236,6 +273,7 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .container-contacto h2 {
@@ -248,12 +286,13 @@ footer {
 .container-info {
     display: flex;
     margin-right: 20px;
+    align-items: center;
 }
 
 .container-info span {
-    font-size: 50px;
-    padding: 20px;
-    color: #cb5709;
+    font-size: 45px;
+    padding: 15px;
+    color: var(--color-texto-experiencia);
 }
 
 .container-info div {
@@ -261,11 +300,11 @@ footer {
 }
 
 .container-info div h3 {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .container-info div p {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 @media only screen and (max-width: 872px){
@@ -274,13 +313,20 @@ footer {
       text-align: center;
     }
 
-    .container-info {
-        width: 46%;
+    .texto-perfil {
+        margin-left: 0px;
     }
+
+    .container-contacto {
+        margin-top: 0px;
+    }
+    /* .container-info {
+        width: 46%;
+    } */
 
 }
 
-@media only screen and (max-width: 640px){
+@media only screen and (max-width: 680px){
     header {
         display: block;
         text-align: center;
@@ -305,6 +351,18 @@ footer {
         font-size: 1.3rem;
     }
 
+    .texto-perfil {
+        padding: 20px 0px;
+    }
+
+}
+
+
+@media only screen and (max-width: 400px){
+    header nav ul a, #toggleModeButton {
+        margin-bottom: 10px;
+    }
+
 }
 
 
@@ -312,14 +370,24 @@ footer {
 /* Media de contacto */
 
 @media only screen and (max-width: 570px){
-    .container-contacto {
+    /* .container-contacto {
         display: block;
-    }
-    .container-info {
+    } */
+    /* .container-info {
         width: 100%;
-    }
+    } */
     .container-info div h3 {
         font-size: 20px;
     }
+
+}
+
+@media only screen and (max-width: 480px){
+    .container-contacto {
+        margin-left: 20px;
+    }
+    /* .container-info {
+        width: 100%;
+    } */
 
 }
