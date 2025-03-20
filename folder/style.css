@@ -14,7 +14,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.4;
 }
 
 
@@ -25,7 +26,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 12px;
     color: var(--color-primario); /* Ajusta el color del icono */
     transition: color 0.3s ease;
   }
@@ -116,7 +117,7 @@ header nav ul li, #menu-complementaria ul li {
 }
 
 .foto-perfil {
-    width: 150px;
+    width: 180px;
     border-radius: 50%;
 }
 
@@ -142,7 +143,7 @@ header nav ul li, #menu-complementaria ul li {
 
 .experiencia-relevancia  h4 {
     padding-left: 8px;
-    border-left: 15px solid var(--color-relevante);
+    border-left: 20px solid var(--color-relevante);
 }
 
 
@@ -166,8 +167,11 @@ header nav ul li, #menu-complementaria ul li {
 }
 
 .experiencia-profesional ul {
-    margin-left: 15px;
+    margin-left: 20px;
     margin-top: 15px;
+}
+.experiencia-profesional ul li {
+    margin-top: 6px
 }
 
 .relevante, .experiencia-profesional.relevante:hover {
